@@ -9,6 +9,7 @@
     text-decoration: none;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -37,31 +38,30 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.navbar {
-    background-color:#222831; 
-    padding: 10px 0;
-    position: fixed; 
-    height: 3rem;
-    float: right;
+.content-wrapper .navbar {
+    background-color:rgb(34, 40, 49, 0.8 ); 
+    border-bottom: 1px solid #233f5d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     align-items: center;
     display: flex;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000;
-    left: 0;
-    margin: 0;
-    margin-right: 20px;
-    overflow: hidden;
+    padding: 1.4rem 7%;
+    width: 100%;  
+    justify-content: space-between;
+    z-index: 9999;
 }
-.navbar a {
-    font-size: 1rem ;
+.navbar .navbar-nav a {
+    font-size: 1.3rem ;
     color: #ffff;
-    margin-right: 1rem;
     font-weight: 700;
+    display: inline-block;
+    margin: 0 4.6rem ;
 }
 
-.navbar a:hover{
-    color: #59B2F2F4;
+.navbar .navbar-nav a:hover {
+    color : #59B2F2F4;
 }
 
 .navbar .navbar-nav a::after{
@@ -75,12 +75,32 @@ section {
 
 .navbar .navbar-nav a:hover::after{
     transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: #233f5d;
+}
+
+#menu {
+    display: none;
+}
+
+.home-content .btn a:hover{
+    color: #233f5d;
+}
+
 
 #menu-icon {
     font-size: 3.6rem;
     color: #262840;
     display: none;
 }
+
 
 
 
@@ -147,7 +167,7 @@ span{
 .home-content .sosial-media {
     display: flex;
     flex-wrap: wrap;
-    gap: 6.8rem; /* Menambahkan gap antar ikon */
+    gap: 3.8rem; /* Menambahkan gap antar ikon */
 }
 
 
@@ -157,24 +177,24 @@ span{
     box-shadow: 0 0 1rem #59B2F2F4;
 }
 
-.content .title .contact li{
+.title .sosial-media-content li{
     text-decoration: none;
 }
 
-.content .title .contact i {
+.content .title .sosial-media-content i {
     float: left;
     color: #233f5d;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.btn{
+.home-content .btn{
     display: inline-block;
     padding: 1rem 1rem;
     background: #59B2F2F4;
     border-radius: 4rem;
-    box-shadow: 0 0 0.5rem #59B2F2F4;
+    box-shadow: 0 0 1rem #59B2F2F4;
     font-size: 1rem;
-    color: #191f36;
+    color: #fff;
     letter-spacing: .1rem ;
     font-weight: 400;
     transition: .5s ease;
@@ -215,9 +235,15 @@ span{
 }
 
 .sidebar .bio .desc p {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
-    color: #f2f2f2
+    color: #f2f2f2;
+    margin-top: 7rem ;
+}
+
+.sidebar .bio .desc h3 {
+    color: #f2f2f2;
+    margin-top: 1.5rem;
 }
 
 
@@ -340,6 +366,15 @@ span{
     }
 }
 
+
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 55% ;
+    }
+}
+
 @media only screen and (max-width:768px) {
     .sidebar {
         -webkit-box-shadow: none;
@@ -349,6 +384,23 @@ span{
         margin-right: 0;
         width: 100%;
         position: relative;
+    }
+
+    #menu{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .navbar .navbar-nav .active{
+        right: 0;
     }
 
     .sidebar .bio {
