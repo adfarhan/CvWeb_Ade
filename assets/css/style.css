@@ -167,7 +167,7 @@ span{
 .home-content .sosial-media {
     display: flex;
     flex-wrap: wrap;
-    gap: 3.8rem; /* Menambahkan gap antar ikon */
+    gap: 3.8rem; 
 }
 
 
@@ -177,14 +177,24 @@ span{
     box-shadow: 0 0 1rem #59B2F2F4;
 }
 
-.title .sosial-media-content li{
+
+
+.title .sosial-media-content a{
     text-decoration: none;
+    color: #000000;
+    padding: 1rem;
+
+}
+.title .sosial-media-content h3{
+    padding: 1rem;
+
 }
 
 .content .title .sosial-media-content i {
     float: left;
     color: #233f5d;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .home-content .btn{
@@ -202,6 +212,37 @@ span{
 
 
 }
+.title .btn-porto{
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: #59B2F2F4;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #59B2F2F4;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: .1rem ;
+    font-weight: 400;
+    transition: .5s ease;
+    margin-top: 1.5rem;
+
+
+}
+
+.title h3{
+    padding: 0.5rem;
+}
+
+
+
+
+.title .item{
+    padding: 1rem;
+
+}
+
+
+
+
 
 .sidebar .bio .avatar img {
     object-fit: cover;
@@ -293,12 +334,12 @@ span{
     line-height: 25px
 }
 
-.content .title .w33 {
+.content .title .item-w33 {
     width: 30%;
     display: inline-block
 }
 
-.skills {
+.item-w33 .skills {
     height: 10px;
     position: relative;
     background: #233f5d;
@@ -308,7 +349,7 @@ span{
     margin-top: 10px;
 }
 
-.skills span {
+.item-w33 .skills span {
     display: block;
     height: 100%;
     border-top-right-radius: 8px;
@@ -322,7 +363,7 @@ span{
     box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.skills span:after {
+.item-w33  .skills span:after {
     content: "";
     position: absolute;
     top: 0;
@@ -436,4 +477,3 @@ span{
 }
 
 
-/*# sourceMappingURL=style.css.map */
